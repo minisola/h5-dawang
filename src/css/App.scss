@@ -1,0 +1,173 @@
+@import url('./normalize.css');
+@import url('./animate.css');
+body{
+  background:#e8e8e8;
+}
+.app-container{
+  position: relative;
+  width: 750px;
+  height: 100vh;
+  margin:0 auto;
+}
+
+.page{
+  width:750px;
+  height:100vh;
+  position:relative;
+}
+.logo{
+  background:#e8e8e8;
+  width: 375px;
+  height:96px;
+  position:absolute;
+  margin: 47px 0 0 41px;
+
+  img{
+    width: 375px;
+    height:96px;
+    mix-blend-mode: multiply; 
+  }
+}
+.index-decoration{
+  position: absolute;
+  top:33px;
+  right: 14px;
+  width: 127px;
+  height: 122px;
+  background:url('./img/index-bg-decoration.png');
+  background-size: cover;
+}
+.index-title{
+  position: absolute;
+  top:194px;
+  left:50%;
+  transform:translateX(-50%);
+  width: 597px;
+	height: 60px;
+  background:url('./img/index-title-des.png');
+  background-size: cover;
+}
+.index-title-line{
+  position: absolute;
+  top:272px;
+  left:50%;
+  transform:translateX(-50%);
+	width: 588px;
+  height: 2px;
+  background:#b79a62; 
+}
+.index-title-des{
+  position: absolute;
+  top:290px;
+  left:50%;
+  transform:translateX(-50%);
+  width: 607px;
+	height: 30px;
+  background:url('./img/index-title.png');
+  background-size: cover;
+}
+.index-body{
+  position: absolute;
+  top:369px ;
+  right:0;
+  width: 673px;
+	height: 466px; 
+  background:url('./img/index-feature.png');
+  background-size: cover;
+}
+
+.index-goods-bg{
+  position: absolute;
+  top:832px ;
+  right:63px;
+  width: 229px;
+	height: 230px;  
+  background:url('./img/index-goods-circle.png');
+  background-size: cover;
+}
+
+
+.index-goods{
+  position: absolute;
+  top:758px ;
+  right:50px;
+  width: 231px;
+	height: 282px;  
+  background:url('./img/index-goods.png');
+  background-size: cover;
+}
+.index-goods-title{
+  position: absolute;
+  top:910px ;
+  left:80px;
+	width: 353px;
+	height: 86px;  
+  background:url('./img/index-goods-title.png');
+  background-size: cover;
+}
+
+.index-button-wrapper{
+  position: absolute;
+  top:1055px ;
+  left:25px;
+  width: 680px;
+  height: 116px; 
+  display:flex;
+  align-items: center;
+  justify-content: center;
+	background-color: #fefbfd;
+	box-shadow: 2px 8px 16px 0px 
+		rgba(9, 9, 9, 0.24), 
+		inset 2px 6px 14px 0px 
+		rgba(34, 24, 21, 0.35);
+	border-radius: 12px;
+	border: solid 4px #f9f7f4;
+	opacity: 0.76;
+}
+
+.index-button{
+  width: 665px;
+  height: 108px; 
+  background:url('./img/index-button.png') center;
+  background-size: cover;
+  transition: all .3s;
+  &:active{
+    position: relative;
+    top:2px;
+  }
+}
+.index-agreement-box{
+  position: absolute;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  width:698px;
+
+  top:1219px ;
+  left:25px;
+}
+.agreement-checkbox{
+  width:54px;
+  height:50px;
+  background:url('./img/agree-checkbox.png') center;
+  background-size: cover;
+  &.read{
+    background-image:url('./img/agree-checkbox-checked.png') ;
+
+  }
+}
+.agreement-haveread{
+  width: 98px;
+	height: 25px;
+  background:url('./img/haveRead.png') center;
+  background-size: cover;
+  margin:0 10px;
+}
+.agreeement-link{
+	width: 476px;
+	height: 38px;
+  background:url('./img/agreement-text.png') center;
+  background-size: cover;
+  position: relative;
+  top:6px;
+}
