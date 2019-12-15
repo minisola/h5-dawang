@@ -3,7 +3,7 @@ import logo from '../img/index-fosun-logo.png'
 
 
 
-const PageIndex = ({history}) => {
+const Welcome = ({history}) => {
     const [read, setRead] = useState(false)
     const goForm = ()=>{
        if(read){
@@ -16,35 +16,35 @@ const PageIndex = ({history}) => {
     }
     return (
         <div className="page page-1">
-            <div className="logo">
+            <div className="logo animated slideInDown">
                 <img src={logo} alt=""/>
             </div>
             <div className="index-decoration"></div>
 
-            <div className="index-title">
+            <div className="index-title animated delay-1s fadeIn">
 
             </div>
-            <div className="index-title-line">
+            <div className="index-title-line animated delay-1s fadeIn">
 
             </div>
-            <div className="index-title-des"></div>
-            <div className="index-body">
+            <div className="index-title-des animated delay-1s fadeIn"></div>
+            <div className="index-body animated fadeInRightBig">
 
             </div>
             <div className="index-goods-bg">
 
             </div>
-            <div className="index-goods"></div>
+            <div className="index-goods animated slideInRight"></div>
 
-            <div className="index-goods-title">
+            <div className="index-goods-title  animated slideInLeft">
 
             </div>
-            <div className="index-button-wrapper">
+            <div className="index-button-wrapper animated delay-1s fadeInUp">
                 <div className="index-button" onClick={()=>{
                     goForm()
                 }}></div>
             </div>
-            <div className="index-agreement-box">
+            <div className="index-agreement-box animated delay-1s fadeInUp">
                 <div className={read ? 'agreement-checkbox read' : 'agreement-checkbox'}
                 onClick={()=>setRead(!read)}>
                 </div>
@@ -55,4 +55,4 @@ const PageIndex = ({history}) => {
     )
 }
 
-export default PageIndex
+export default Welcome

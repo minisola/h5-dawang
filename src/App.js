@@ -1,8 +1,8 @@
 import React from 'react';
-import { HashRouter as Router, Link, Route, Switch } from 'react-router-dom';
-import PageIndex from './pages/index'
-import PageForm from './pages/form'
-import './css/App.scss';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import Welcome from './pages/Welcome'
+import Form from './pages/Form'
+import './css/app.scss';
 
 function App() {
   return (
@@ -10,8 +10,8 @@ function App() {
       <div className="App">
         <Router>
           <Switch>
-            <Route exact path='/' component={PageIndex} />
-            <Route path='/form'  component={PageForm} />
+            <Route exact path='/' component={Welcome} />
+            <Route path='/form'  component={Form} />
           </Switch>
         </Router>
       </div>

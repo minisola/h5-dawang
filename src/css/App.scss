@@ -1,8 +1,8 @@
 @import url('./normalize.css');
 @import url('./animate.css');
-body{
-  background:#e8e8e8;
-}
+*:focus {
+  outline: none;
+} 
 .app-container{
   position: relative;
   width: 750px;
@@ -14,6 +14,12 @@ body{
   width:750px;
   height:100vh;
   position:relative;
+  background:#e8e8e8;
+  position:absolute;
+  left:50%;
+  margin-left: -375px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .logo{
   background:#e8e8e8;
@@ -34,8 +40,8 @@ body{
   right: 14px;
   width: 127px;
   height: 122px;
-  background:url('./img/index-bg-decoration.png');
-  background-size: cover;
+  background:url('../img/index-bg-decoration.png') no-repeat;
+  background-size: contain;
 }
 .index-title{
   position: absolute;
@@ -44,8 +50,8 @@ body{
   transform:translateX(-50%);
   width: 597px;
 	height: 60px;
-  background:url('./img/index-title-des.png');
-  background-size: cover;
+  background:url('../img/index-title-des.png') no-repeat;
+  background-size: contain;
 }
 .index-title-line{
   position: absolute;
@@ -63,8 +69,8 @@ body{
   transform:translateX(-50%);
   width: 607px;
 	height: 30px;
-  background:url('./img/index-title.png');
-  background-size: cover;
+  background:url('../img/index-title.png') no-repeat;
+  background-size: contain;
 }
 .index-body{
   position: absolute;
@@ -72,8 +78,8 @@ body{
   right:0;
   width: 673px;
 	height: 466px; 
-  background:url('./img/index-feature.png');
-  background-size: cover;
+  background:url('../img/index-feature.png') no-repeat;
+  background-size: contain;
 }
 
 .index-goods-bg{
@@ -82,8 +88,8 @@ body{
   right:63px;
   width: 229px;
 	height: 230px;  
-  background:url('./img/index-goods-circle.png');
-  background-size: cover;
+  background:url('../img/index-goods-circle.png') no-repeat;
+  background-size: contain;
 }
 
 
@@ -93,8 +99,8 @@ body{
   right:50px;
   width: 231px;
 	height: 282px;  
-  background:url('./img/index-goods.png');
-  background-size: cover;
+  background:url('../img/index-goods.png') no-repeat;
+  background-size: contain;
 }
 .index-goods-title{
   position: absolute;
@@ -102,8 +108,8 @@ body{
   left:80px;
 	width: 353px;
 	height: 86px;  
-  background:url('./img/index-goods-title.png');
-  background-size: cover;
+  background:url('../img/index-goods-title.png') no-repeat;
+  background-size: contain;
 }
 
 .index-button-wrapper{
@@ -128,8 +134,8 @@ body{
 .index-button{
   width: 665px;
   height: 108px; 
-  background:url('./img/index-button.png') center;
-  background-size: cover;
+  background:url('../img/index-button.png') center no-repeat;
+  background-size: contain;
   transition: all .3s;
   &:active{
     position: relative;
@@ -149,25 +155,153 @@ body{
 .agreement-checkbox{
   width:54px;
   height:50px;
-  background:url('./img/agree-checkbox.png') center;
-  background-size: cover;
+  background:url('../img/agree-checkbox.png') center no-repeat;
+  background-size: contain;
   &.read{
-    background-image:url('./img/agree-checkbox-checked.png') ;
+    background-image:url('../img/agree-checkbox-checked.png') ;
 
   }
 }
 .agreement-haveread{
   width: 98px;
 	height: 25px;
-  background:url('./img/haveRead.png') center;
-  background-size: cover;
+  background:url('../img/haveRead.png') center no-repeat;
+  background-size: contain;
   margin:0 10px;
 }
 .agreeement-link{
 	width: 476px;
 	height: 38px;
-  background:url('./img/agreement-text.png') center;
-  background-size: cover;
+  background:url('../img/agreement-text.png') center no-repeat;
+  background-size: contain;
   position: relative;
   top:6px;
+}
+
+.page-2{
+  background:url('../img/form-bg.png') #efefef no-repeat top;
+  background-size: 100%;
+  .logo{
+    background-color:transparent !important;
+    margin-top:23px;
+  }
+}
+
+.form{
+  width: 598px;
+	height: 1070px;
+	background-color: rgba(255,255,255,.79);
+	box-shadow: 2px 8px 16px 0px 
+		rgba(148, 144, 145, 0.24);
+	border-radius: 6px;
+  margin:0 auto;
+  position: relative;
+  top: 132px;
+  padding:35px 55px;
+  box-sizing: border-box;
+}
+.input-title{
+  height:27px;
+  background-size: contain;
+  margin-bottom: 25px;
+  &.sex{
+    background-image: url(../img/form-name-sex.png);
+    width: 149px;
+  }
+  &.name{
+    background-image: url(../img/form-name-name.png);
+    width: 148px
+  }
+  &.phone{
+    background-image: url(../img/form-name-phone.png);
+    width: 55px;
+  }
+  &.age{
+    background-image: url(../img/form-name-age.png);
+    width: 165px;
+  }
+}
+.input-radio-group{
+  padding:40px;
+  display:flex;
+  justify-content: center;
+  .input-radio{
+    display:flex;
+    align-items: center;
+  }
+  .input-radio.male{
+    .input-radio-label{
+      width: 25px;
+      height: 26px;
+      background-image: url(../img/form-name-male.png);
+      background-size: contain;
+    }
+  }
+  .input-radio.female{
+    margin-left: 15px;
+    .input-radio-label{
+      width: 25px;
+      height: 26px;
+      background-image: url(../img/form-name-female.png);
+      background-size: contain;
+    }
+  }
+  .input-radio-checkbox{
+    width: 48px;
+    height: 43px;
+    background-color: #fefbfd;
+    box-shadow: 1px 4px 8px 0px 
+      rgba(9, 9, 9, 0.24), 
+      inset 1px 3px 7px 0px 
+      rgba(34, 24, 21, 0.35);
+    border-radius: 6px;
+    border: solid 2px #f9f7f4;
+    opacity: 0.76;
+    margin:0 15px;
+    position: relative;
+    &.checked{
+      background:#d0a846;
+    }
+  }
+}
+.input-form{
+  width: 496px;
+  height: 57px;
+  margin-bottom: 56px;
+  font-size: 0;
+  input,select{
+    box-sizing: border-box;
+    width:100%;
+    height: 57px;
+    background-color: #fefbfd;
+    box-shadow: 1px 4px 8px 0px 
+      rgba(9, 9, 9, 0.24), 
+      inset 1px 3px 7px 0px 
+      rgba(34, 24, 21, 0.35);
+    border-radius: 6px;
+    border: solid 2px #f9f7f4;
+    opacity: 0.76;
+  font-size: 20px;
+  line-height: 57px;
+  padding:0 20px;
+  }
+  select{
+    text-align: center;
+    color: #d0a846;
+  }
+}
+.reminder{
+  width: 492px;
+  height: 223px;
+  background:url('../img/form-reminder.png') center no-repeat;
+  background-size: contain;
+  margin-top: -20px;
+}
+.form-button{
+  width: 254px;
+	height: 110px;
+  background:url('../img/form-name-button.png') center no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+  margin-top: 20px;
 }
