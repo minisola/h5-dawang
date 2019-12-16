@@ -15,14 +15,19 @@ const Form = () => {
     const [phone, setPhone] = useState('')
     const [age, setAge] = useState(ageList[0])
 
+    let loading = false
+
     const submitForm = ()=>{
+
+        if(loading){
+            alert('正在提交中..请稍候')
+        }
         const data = {
             sex:sex.trim()
             ,name:name.trim()
             ,phone:phone.trim()
             ,age:age.trim()
         }
-        Axios.post('/',{ data})
 
         if(!data.sex){
             return alert('请选择性别')
@@ -42,6 +47,16 @@ const Form = () => {
         if(!/^[1-9]\d{10}$/.test(data.phone)){
             return alert('请填写正确的电话号码')
         }
+        loading = true
+        Axios.post('http://139.196.20.56:10300/formsubmit',data).then(res=>{
+            loading = false
+            if(res.data.code){
+                alert('提交成功!')
+                window.location.href=window.location.origin + window.location.pathname
+            }else{
+                alert(res.data.msg)
+            }
+        })
     }
 
     return (
