@@ -1,5 +1,9 @@
 @import url('./normalize.css');
 @import url('./animate.css');
+@import url('./loader.css');
+body{
+  background:#e8e8e8;
+}
 *:focus {
   outline: none;
 } 
@@ -20,6 +24,11 @@
   margin-left: -375px;
   overflow-x: hidden;
   overflow-y: auto;
+  .loading{
+    margin: 0 auto;
+    position: relative;
+    top:20%;
+  }
 }
 .logo{
   background:#e8e8e8;
