@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Axios from 'Axios'
+import axios from 'axios'
 
 import logo from '../img/index-fosun-logo.png'
 
@@ -48,7 +48,7 @@ const Form = () => {
             return alert('请填写正确的电话号码')
         }
         loading = true
-        Axios.post('http://139.196.20.56:10300/formsubmit',data).then(res=>{
+        axios.post('http://139.196.20.56:10300/formsubmit',data).then(res=>{
             loading = false
             if(res.data.code){
                 alert('提交成功!')

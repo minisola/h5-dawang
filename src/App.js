@@ -21,7 +21,7 @@ function App() {
     Promise.all(imgHandleQuery).then(()=>{
       const $pageLoading = document.querySelector('.page-loading')
       $pageLoading.parentNode.removeChild($pageLoading)
-      setDisplay(true)
+      setDisplay('block')
     })
 
     console.log('effect');
@@ -49,11 +49,11 @@ function imgOnload(path) {
       //计时器->30秒仍然无法载入则直接通过
       const timeInterval = setInterval(()=>{
         time++
-        if(time>=30000) {
+        if(time>=30) {
           clearInterval(timeInterval) 
           resolve()
         }
-      })
+      },1000)
       img.onload = ()=>{
         clearInterval(timeInterval) 
         resolve()
